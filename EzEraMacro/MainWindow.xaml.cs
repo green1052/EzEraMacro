@@ -55,7 +55,7 @@ namespace EzEraMacro
         private void WordListBox_OnKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key != Key.Delete || !(sender is ListBox listBox)) return;
-
+            
             foreach (string listBoxSelectedItem in listBox.SelectedItems.OfType<string>().ToArray())
                 listBox.Items.Remove(listBoxSelectedItem);
         }
